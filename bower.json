@@ -1,0 +1,14 @@
+{
+  "name": "myob",
+  "description": "MYOB Coding Exercise",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "bootstrap": "latest",
+    "ng-lodash": "^0.4.0"
+
+  }
+}
