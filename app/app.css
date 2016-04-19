@@ -1,0 +1,33 @@
+.inputFormStyle {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.inputFormHeadingStyle {
+    margin-left: 26%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.inputFormErrorStyle {
+    margin-left: 23%;
+    color: #FF0000;
+    font-size: large;
+    font-weight: bold;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.submitButtonStyle {
+    margin-left: 30%;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+
+.paySlipHeadingStyle {
+    font-size: large;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+

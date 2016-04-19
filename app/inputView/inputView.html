@@ -1,0 +1,82 @@
+<div class="inputFormStyle">
+<form class="form-horizontal" role="form" ng-submit="addEmployee()" id="empForm">
+    <label class="inputFormHeadingStyle">Input Employee Details</label>
+    <div class="form-group">
+        <label class="col-md-2 control-label">FirstName</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" name="firstName"
+                   ng-model="firstName" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">LastName</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" name="lastName"
+                   ng-model="lastName" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">Salary</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" name="salary" numbers-only input-pattern="[^0-9.]+"
+                   ng-model="salary" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">Super</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" name="super" numbers-only input-pattern="[^0-9]+"
+                   ng-model="super" required />
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">Pay Period</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" name="payPeriod"
+                   ng-model="payPeriod" required />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="submitButtonStyle">
+            <input type="submit" value="Submit" class="btn btn-primary"/>
+        </div>
+    </div>
+    <div ng-show="showErrorMessage">
+        <label class="inputFormErrorStyle">Please enter a valid super rate.</label>
+    </div>
+</form>
+    <table class="table" ng-if="employeeDetails.length > 0" >
+        <tr>
+            <th>FirstName
+            </th>
+            <th>LastName
+            </th>
+            <th>Salary
+            </th>
+            <th>Super
+            </th>
+            <th>PayPeriod
+            </th>
+        </tr>
+        <tr ng-repeat="employee in employeeDetails">
+        <td>{{employee.firstName}}
+        </td>
+        <td>{{employee.lastName}}
+        </td>
+        <td>{{employee.salary}}
+        </td>
+        <td>{{employee.super}}
+        </td>
+        <td>{{employee.payPeriod}}
+        </td>
+        <td>[<a href ng-click="removeEmployee($index)">Delete</a>]
+        </td>
+        </tr>
+    </table>
+
+
+</div>
+
+

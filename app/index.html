@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="payslipApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="payslipApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="payslipApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="payslipApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MYOB Coding exercise</title>
+    <meta name="description" content="MYOB Coding Exercise">
+    <meta name="viewport" content="width=device-width">
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css -->
+    <link rel="stylesheet" href="app.css">
+    <!-- endbuild -->
+</head>
+<body>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#/inputView"><label>Input View</label></a></li>
+    <li><a href="#/payslipView"><label>Payslips View</label></a></li>
+  </ul>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div ng-view></div>
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
+
+
+
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js -->
+  <script src="app.js"></script>
+  <script src="inputView/inputView.js"></script>
+  <script src="inputView/controller/inputViewCtrl.js"></script>
+  <script src="inputView/service/employeeService.js"></script>
+  <script src="inputView/directive/numbersOnly.js"></script>
+  <script src="payslipView/payslipView.js"></script>
+  <script src="payslipView/controller/payslipCtrl.js"></script>
+  <script src="payslipView/service/taxService.js"></script>
+  <script src="payslipView/service/payslipService.js"></script>
+  <script src="payslipView/model/employeePaySlip.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

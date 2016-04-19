@@ -1,0 +1,28 @@
+<div ng-if="payslips.length > 0">
+    <Label class="paySlipHeadingStyle">
+        Your Pay Slips:
+    </Label>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Pay Period</th>
+            <th>Gross Income</th>
+            <th>Income Tax</th>
+            <th>Net Income</th>
+            <th>Super</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="payslipResult in payslips">
+            <td>{{payslipResult.employeeName}}</td>
+            <td>{{payslipResult.payPeriod}}</td>
+            <td>{{payslipResult.grossIncome }}</td>
+            <td>{{payslipResult.incomeTax }}</td>
+            <td>{{payslipResult.netIncome }}</td>
+            <td>{{payslipResult.super }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
